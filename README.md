@@ -8,9 +8,9 @@
   <p align="center">
     <a href="https://netflix-clone-react-typescript.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/crazy-man22/netflix-clone-react-typescript/issues">Report Bug</a>
+    <a href="https://github.com/mwakidenis/boomflix/issues">Report Bug</a>
     ·
-    <a href="https://github.com/crazy-man22/netflix-clone-react-typescript/issues">Request Feature</a>
+    <a href="https://github.com/mwakidenis/boomflix/issues">Request Feature</a>
   </p>
 </div>
 
