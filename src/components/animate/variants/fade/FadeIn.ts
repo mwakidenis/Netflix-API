@@ -12,3 +12,4 @@ export const varFadeIn = {
   animate: { opacity: 1, transition: TRANSITION_ENTER },
   exit: { opacity: 0, transition: TRANSITION_EXIT },
 };
+

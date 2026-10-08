@@ -47,3 +47,4 @@ export function Component() {
 }
 
 Component.displayName = "GenreExplore";
+

@@ -14,3 +14,4 @@ export default function SliderRowForGenre({
   const Component = withPagination(SlickSlider, mediaType, genre);
   return <Component />;
 }
+

@@ -5,21 +5,21 @@ import { formatTime } from "src/utils/common";
 
 const StyledSlider = styled(Slider)({
   borderRadius: 0,
-  "& .NetflixSlider-track": {
+  "& .BoomflixSlider-track": {
     backgroundColor: "red !important",
     border: 0,
   },
-  "& .NetflixSlider-rail": {
+  "& .BoomflixSlider-rail": {
     border: "none",
     backgroundColor: "white !important",
     opacity: 0.85,
   },
-  "& .NetflixSlider-thumb": {
+  "& .BoomflixSlider-thumb": {
     borderRadius: "50%",
     height: 10,
     width: 10,
     backgroundColor: "red",
-    "&:focus, &:hover, &.Netflix-active, &.Netflix-focusVisible": {
+    "&:focus, &:hover, &.Boomflix-active, &.Boomflix-focusVisible": {
       boxShadow: "inherit",
       height: 15,
       width: 15,
@@ -31,7 +31,7 @@ const StyledSlider = styled(Slider)({
       width: 10,
     },
   },
-  // "& .NetflixSlider-valueLabel": {
+  // "& .BoomflixSlider-valueLabel": {
   //   lineHeight: 1.2,
   //   fontSize: 12,
   //   background: "unset",
@@ -43,7 +43,7 @@ const StyledSlider = styled(Slider)({
   //   transformOrigin: "bottom left",
   //   transform: "translate(50%, -100%) rotate(-45deg) scale(0)",
   //   "&:before": { display: "none" },
-  //   "&.NetflixSlider-valueLabelOpen": {
+  //   "&.BoomflixSlider-valueLabelOpen": {
   //     transform: "translate(50%, -100%) rotate(-45deg) scale(1)",
   //   },
   //   "& > *": {
@@ -78,3 +78,4 @@ function PlayerSeekbar({
 }
 
 export default PlayerSeekbar;
+

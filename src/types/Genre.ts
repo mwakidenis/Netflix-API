@@ -8,3 +8,4 @@ export type CustomGenre = {
   name: string;
   apiString: string;
 };
+

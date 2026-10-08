@@ -10,20 +10,20 @@ const StyledSlider = styled(Slider)({
   height: 5,
   borderRadius: 0,
   padding: 0,
-  "& .NetflixSlider-track": {
+  "& .BoomflixSlider-track": {
     border: "none",
     backgroundColor: "red",
   },
-  "& .NetflixSlider-rail": {
+  "& .BoomflixSlider-rail": {
     border: "none",
     backgroundColor: "white",
     opacity: 0.85,
   },
-  "& .NetflixSlider-thumb": {
+  "& .BoomflixSlider-thumb": {
     height: 10,
     width: 10,
     backgroundColor: "red",
-    "&:focus, &:hover, &.Netflix-active, &.Netflix-focusVisible": {
+    "&:focus, &:hover, &.Boomflix-active, &.Boomflix-focusVisible": {
       boxShadow: "inherit",
       height: 15,
       width: 15,
@@ -51,7 +51,7 @@ export default function VolumeControllers({
       alignItems="center"
       spacing={{ xs: 0.5, sm: 1 }}
       // sx={{
-      //   "&:hover NetflixSlider-root": {
+      //   "&:hover BoomflixSlider-root": {
       //     display: "inline-block",
       //   },
       // }}
@@ -70,3 +70,4 @@ export default function VolumeControllers({
     </Stack>
   );
 }
+

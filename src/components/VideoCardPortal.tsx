@@ -12,7 +12,7 @@ import { Movie } from "src/types/Movie";
 import { usePortal } from "src/providers/PortalProvider";
 import { useDetailModal } from "src/providers/DetailModalProvider";
 import { formatMinuteToReadable, getRandomNumber } from "src/utils/common";
-import NetflixIconButton from "./NetflixIconButton";
+import BoomflixIconButton from "./BoomflixIconButton";
 import MaxLineTypography from "./MaxLineTypography";
 import AgeLimitChip from "./AgeLimitChip";
 import QualityChip from "./QualityChip";
@@ -88,34 +88,34 @@ export default function VideoCardModal({
             {video.title}
           </MaxLineTypography>
           <div style={{ flexGrow: 1 }} />
-          <NetflixIconButton>
+          <BoomflixIconButton>
             <VolumeUpIcon />
-          </NetflixIconButton>
+          </BoomflixIconButton>
         </div>
       </div>
       <CardContent>
         <Stack spacing={1}>
           <Stack direction="row" spacing={1}>
-            <NetflixIconButton
+            <BoomflixIconButton
               sx={{ p: 0 }}
               onClick={() => navigate(`/${MAIN_PATH.watch}`)}
             >
               <PlayCircleIcon sx={{ width: 40, height: 40 }} />
-            </NetflixIconButton>
-            <NetflixIconButton>
+            </BoomflixIconButton>
+            <BoomflixIconButton>
               <AddIcon />
-            </NetflixIconButton>
-            <NetflixIconButton>
+            </BoomflixIconButton>
+            <BoomflixIconButton>
               <ThumbUpOffAltIcon />
-            </NetflixIconButton>
+            </BoomflixIconButton>
             <div style={{ flexGrow: 1 }} />
-            <NetflixIconButton
+            <BoomflixIconButton
               onClick={() => {
                 setDetailType({ mediaType: MEDIA_TYPE.Movie, id: video.id });
               }}
             >
               <ExpandMoreIcon />
-            </NetflixIconButton>
+            </BoomflixIconButton>
           </Stack>
           <Stack direction="row" spacing={1} alignItems="center">
             <Typography
@@ -140,3 +140,4 @@ export default function VideoCardModal({
     </Card>
   );
 }
+

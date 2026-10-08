@@ -29,3 +29,4 @@ export const varZoomInRight = {
   animate: { ...IN, translateX: 0, transition: TRANSITION_ENTER },
   exit: { ...OUT, translateX: DISTANCE, transition: TRANSITION_EXIT },
 };
+

@@ -61,3 +61,4 @@ export default function withPagination(
     return <MainLoadingScreen />;
   };
 }
+

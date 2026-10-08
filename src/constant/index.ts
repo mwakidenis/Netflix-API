@@ -26,3 +26,4 @@ export const INITIAL_DETAIL_STATE = {
   mediaType: undefined,
   mediaDetail: undefined,
 };
+

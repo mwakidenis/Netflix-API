@@ -49,3 +49,4 @@ export const formatTime = (current: number) => {
     return `${mString}:${sString}`;
   }
 };
+

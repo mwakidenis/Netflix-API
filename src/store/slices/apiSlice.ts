@@ -6,3 +6,4 @@ export const tmdbApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: API_ENDPOINT_URL }),
   endpoints: (build) => ({}),
 });
+

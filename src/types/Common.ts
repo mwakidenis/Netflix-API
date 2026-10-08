@@ -34,3 +34,4 @@ export type PaginatedResult = {
 };
 
 export type PaginatedMovieResult = PaginatedResult & { results: Movie[] };
+

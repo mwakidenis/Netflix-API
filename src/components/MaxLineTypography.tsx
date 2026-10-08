@@ -24,3 +24,4 @@ const MaxLineTypography = forwardRef<
 });
 
 export default MaxLineTypography;
+
