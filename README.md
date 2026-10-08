@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="http://Netflix-clone-with-tmdb-using-react-mui.vercel.app/">
+  <a href="http://boomflix-rosy.vercel.app/">
     <img src="./public/assets/netflix-logo.png" alt="Logo" width="100" height="32">
   </a>
 
