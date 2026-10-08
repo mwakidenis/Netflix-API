@@ -18,7 +18,7 @@ import Player from "video.js/dist/types/player";
 
 import MaxLineTypography from "./MaxLineTypography";
 import PlayButton from "./PlayButton";
-import BoomflixIconButton from "./BoomflixIconButton";
+import NetflixIconButton from "./NetflixIconButton";
 import AgeLimitChip from "./AgeLimitChip";
 import QualityChip from "./QualityChip";
 import { formatMinuteToReadable, getRandomNumber } from "src/utils/common";
@@ -168,20 +168,20 @@ export default function DetailModal() {
                 </MaxLineTypography>
                 <Stack direction="row" spacing={2} sx={{ mb: 3 }}>
                   <PlayButton sx={{ color: "black", py: 0 }} />
-                  <BoomflixIconButton>
+                  <NetflixIconButton>
                     <AddIcon />
-                  </BoomflixIconButton>
-                  <BoomflixIconButton>
+                  </NetflixIconButton>
+                  <NetflixIconButton>
                     <ThumbUpOffAltIcon />
-                  </BoomflixIconButton>
+                  </NetflixIconButton>
                   <Box flexGrow={1} />
-                  <BoomflixIconButton
+                  <NetflixIconButton
                     size="large"
                     onClick={() => handleMute(muted)}
                     sx={{ zIndex: 2 }}
                   >
                     {!muted ? <VolumeUpIcon /> : <VolumeOffIcon />}
-                  </BoomflixIconButton>
+                  </NetflixIconButton>
                 </Stack>
 
                 <Container
@@ -257,4 +257,5 @@ export default function DetailModal() {
 
   return null;
 }
+
 

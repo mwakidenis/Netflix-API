@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 
-const BoomflixIconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
+const NetflixIconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ children, sx, ...others }, ref) => {
     return (
       <IconButton
@@ -24,5 +24,6 @@ const BoomflixIconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   }
 );
 
-export default BoomflixIconButton;
+export default NetflixIconButton;
+
 

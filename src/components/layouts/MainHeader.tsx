@@ -14,7 +14,7 @@ import useOffSetTop from "src/hooks/useOffSetTop";
 import { APP_BAR_HEIGHT } from "src/constant";
 import Logo from "../Logo";
 import SearchBox from "../SearchBox";
-import BoomflixNavigationLink from "../BoomflixNavigationLink";
+import NetflixNavigationLink from "../NetflixNavigationLink";
 
 const pages = ["My List", "Movies", "Tv Shows"];
 
@@ -111,7 +111,7 @@ const MainHeader = () => {
             textDecoration: "none",
           }}
         >
-          Boomflix
+          Netflix
         </Typography>
         <Stack
           direction="row"
@@ -119,14 +119,14 @@ const MainHeader = () => {
           sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
         >
           {pages.map((page) => (
-            <BoomflixNavigationLink
+            <NetflixNavigationLink
               to=""
               variant="subtitle1"
               key={page}
               onClick={handleCloseNavMenu}
             >
               {page}
-            </BoomflixNavigationLink>
+            </NetflixNavigationLink>
           ))}
         </Stack>
 
@@ -165,4 +165,5 @@ const MainHeader = () => {
   );
 };
 export default MainHeader;
+
 

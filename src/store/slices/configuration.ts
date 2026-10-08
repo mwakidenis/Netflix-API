@@ -27,3 +27,4 @@ export const extendedApi = tmdbApi.injectEndpoints({
 
 export const { useGetConfigurationQuery } = extendedApi;
 
+

@@ -9,7 +9,7 @@ import Stack from "@mui/material/Stack";
 import CustomNavigation from "./CustomNavigation";
 import VideoItemWithHover from "src/components/VideoItemWithHover";
 import { ARROW_MAX_WIDTH } from "src/constant";
-import BoomflixNavigationLink from "src/components/BoomflixNavigationLink";
+import NetflixNavigationLink from "src/components/NetflixNavigationLink";
 import MotionContainer from "src/components/animate/MotionContainer";
 import { varFadeIn } from "src/components/animate/variants/fade/FadeIn";
 import { CustomGenre, Genre } from "src/types/Genre";
@@ -36,7 +36,7 @@ const StyledSlider = styled(Slider)(
       "& .slick-list > .slick-track": {
         margin: "0px !important",
       },
-      "& .slick-list > .slick-track > .slick-current > div > .BoomflixBox-root > .BoomflixPaper-root:hover":
+      "& .slick-list > .slick-track > .slick-current > div > .NetflixBox-root > .NetflixPaper-root:hover":
         {
           transformOrigin: "0% 50% !important",
         },
@@ -146,7 +146,7 @@ export default function SlickSlider({ data, genre }: SlickSliderProps) {
             alignItems="center"
             sx={{ mb: 2, pl: { xs: "30px", sm: "60px" } }}
           >
-            <BoomflixNavigationLink
+            <NetflixNavigationLink
               variant="h5"
               to={`/genre/${
                 genre.id || genre.name.toLowerCase().replace(" ", "_")
@@ -174,7 +174,7 @@ export default function SlickSlider({ data, genre }: SlickSliderProps) {
                   </motion.span>
                 ))}
               </MotionContainer>
-            </BoomflixNavigationLink>
+            </NetflixNavigationLink>
           </Stack>
 
           <RootStyle>
@@ -204,4 +204,5 @@ export default function SlickSlider({ data, genre }: SlickSliderProps) {
     </Box>
   );
 }
+
 

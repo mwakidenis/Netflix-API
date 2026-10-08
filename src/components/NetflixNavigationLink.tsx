@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import Link, { LinkProps } from "@mui/material/Link";
 
-export default function BoomflixNavigationLink({
+export default function NetflixNavigationLink({
   sx,
   children,
   ...others
@@ -19,4 +19,5 @@ export default function BoomflixNavigationLink({
     </Link>
   );
 }
+
 

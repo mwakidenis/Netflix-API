@@ -27,3 +27,4 @@ export const INITIAL_DETAIL_STATE = {
   mediaDetail: undefined,
 };
 
+

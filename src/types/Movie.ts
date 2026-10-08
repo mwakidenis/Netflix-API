@@ -60,3 +60,4 @@ export type Movie = {
   vote_average: number;
 };
 
+

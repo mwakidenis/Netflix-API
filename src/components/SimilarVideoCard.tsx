@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import { Movie } from "src/types/Movie";
-import BoomflixIconButton from "./BoomflixIconButton";
+import NetflixIconButton from "./NetflixIconButton";
 import MaxLineTypography from "./MaxLineTypography";
 import { formatMinuteToReadable, getRandomNumber } from "src/utils/common";
 import AgeLimitChip from "./AgeLimitChip";
@@ -81,9 +81,9 @@ export default function SimilarVideoCard({ video }: SimilarVideoCardProps) {
               </Stack>
             </div>
             <div style={{ flexGrow: 1 }} />
-            <BoomflixIconButton>
+            <NetflixIconButton>
               <AddIcon />
-            </BoomflixIconButton>
+            </NetflixIconButton>
           </Stack>
           <MaxLineTypography maxLine={4} variant="subtitle2">
             {video.overview}
@@ -93,4 +93,5 @@ export default function SimilarVideoCard({ video }: SimilarVideoCardProps) {
     </Card>
   );
 }
+
 

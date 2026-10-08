@@ -30,3 +30,4 @@ export const varZoomInRight = {
   exit: { ...OUT, translateX: DISTANCE, transition: TRANSITION_EXIT },
 };
 
+

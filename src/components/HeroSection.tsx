@@ -9,7 +9,7 @@ import { getRandomNumber } from "src/utils/common";
 import MaxLineTypography from "./MaxLineTypography";
 import PlayButton from "./PlayButton";
 import MoreInfoButton from "./MoreInfoButton";
-import BoomflixIconButton from "./BoomflixIconButton";
+import NetflixIconButton from "./NetflixIconButton";
 import MaturityRate from "./MaturityRate";
 import useOffSetTop from "src/hooks/useOffSetTop";
 import { useDetailModal } from "src/providers/DetailModalProvider";
@@ -169,13 +169,13 @@ export default function TopTrailer({ mediaType }: TopTrailerProps) {
                     bottom: "35%",
                   }}
                 >
-                  <BoomflixIconButton
+                  <NetflixIconButton
                     size="large"
                     onClick={() => handleMute(muted)}
                     sx={{ zIndex: 2 }}
                   >
                     {!muted ? <VolumeUpIcon /> : <VolumeOffIcon />}
-                  </BoomflixIconButton>
+                  </NetflixIconButton>
                   <MaturityRate>{`${maturityRate}+`}</MaturityRate>
                 </Stack>
               </Box>
@@ -235,4 +235,5 @@ export default function TopTrailer({ mediaType }: TopTrailerProps) {
     </Box>
   );
 }
+
 

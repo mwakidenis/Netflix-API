@@ -22,3 +22,4 @@ export default function MaturityRate({ children }: { children: ReactNode }) {
   );
 }
 
+

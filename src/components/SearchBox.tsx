@@ -21,7 +21,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
-  "& .BoomflixInputBase-input": {
+  "& .NetflixInputBase-input": {
     width: 0,
     transition: theme.transitions.create("width", {
       duration: theme.transitions.duration.complex,
@@ -68,4 +68,5 @@ export default function SearchBox() {
     </Search>
   );
 }
+
 

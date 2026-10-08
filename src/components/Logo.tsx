@@ -7,8 +7,8 @@ export default function Logo({ sx }: BoxProps) {
     <RouterLink to={`/${MAIN_PATH.browse}`}>
       <Box
         component="img"
-        alt="Boomflix Logo"
-        src="/assets/Boomflix-logo.png"
+        alt="Netflix Logo"
+        src="/assets/Netflix-logo.png"
         width={87}
         height={25}
         sx={{
@@ -18,4 +18,5 @@ export default function Logo({ sx }: BoxProps) {
     </RouterLink>
   );
 }
+
 
