@@ -8,9 +8,9 @@
   <p align="center">
     <a href="https://Netflix-clone-react-typescript.vercel.app/">View Demo</a>
     ·
-    <a href="https://github.com/mwakidenis/Netflix/issues">Report Bug</a>
+    <a href="https://github.com/mwakidenis/Netflix-API/issues">Report Bug</a>
     ·
-    <a href="https://github.com/mwakidenis/Netflix/issues">Request Feature</a>
+    <a href="https://github.com/mwakidenis/Netflix-API/issues">Request Feature</a>
   </p>
 </div>
 
