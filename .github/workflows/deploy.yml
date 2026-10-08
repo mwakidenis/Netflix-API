@@ -29,20 +29,24 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+
+      - name: Check Node and npm
+        run: |
+          node --version
+          npm --version
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build application
+      - name: Build React application
         env:
-          TMDB_V3_API_KEY: ${{ secrets.TMDB_V3_API_KEY }}
+          VITE_TMDB_V3_API_KEY: ${{ secrets.TMDB_V3_API_KEY }}
         run: npm run build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload build files
+      - name: Upload build
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -51,6 +55,7 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
