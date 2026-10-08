@@ -6,7 +6,7 @@
   <h3 align="center">Netflix Clone</h3>
 
   <p align="center">
-    <a href="https://Netflix-clone-react-typescript.vercel.app/">View Demo</a>
+    <a href="https://boomflix-rosy.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/mwakidenis/Netflix-API/issues">Report Bug</a>
     ·
