@@ -37,7 +37,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           branch: automated/auto-pr
-          base: main
+          base: ${{ github.event.repository.default_branch }}
           title: "chore: fetch latest commits and repo metrics"
           body: |
             This PR was opened automatically by the **Auto PR** workflow.
