@@ -1,0 +1,49 @@
+name: Auto merge PR
+
+on:
+  # Runs at the top of every hour, every day.
+  schedule:
+    - cron: '0 * * * *'
+  # Allows you to run it manually from the Actions tab.
+  workflow_dispatch:
+
+# These permissions are REQUIRED for the action to open a PR.
+permissions:
+  contents: write          # create/update branches and commits
+  pull-requests: write     # open and update the pull request
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so the action can compare branches
+
+      # ---------------------------------------------------------------
+      # STEP 1: Make whatever change you want the PR to contain.
+      # Replace this with your real logic (script, generator, formatter…).
+      # ---------------------------------------------------------------
+      - name: "refactor continue-on-error: UI/UX"
+        run: |
+          set -euo pipefail
+          echo "Last auto-update: $(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> AUTO_UPDATE.txt
+
+      # ---------------------------------------------------------------
+      # STEP 2: Open (or update) the pull request.
+      # ---------------------------------------------------------------
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automated/auto-pr
+          base: main
+          title: "chore: fetch latest commits and repo metrics"
+          body: |
+            This PR was opened automatically by the **Auto PR** workflow.
+
+            - Triggered by: `${{ github.event_name }}`
+            - Run: ${{ github.run_id }}
+          commit-message: "chore: automated update"
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
