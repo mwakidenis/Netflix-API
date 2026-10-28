@@ -92,19 +92,10 @@ The tests run locally without a TMDB API key or external requests.
 ## Install with Docker
 
 ```sh
-docker build --build-arg TMDB_V3_API_KEY=your_api_key_here -t netflix-clone .
+docker build --build-arg TMDB_V3_API_KEY=your_api_key_here -t Netflix-clone .
 
-docker run --name netflix-clone-website --rm -d -p 80:80 netflix-clone
+docker run --name Netflix-clone-website --rm -d -p 80:80 Netflix-clone
 ```
-
-To build and smoke-test the container with a placeholder API key, run:
-
-```sh
-sh tests/docker-smoke.sh
-```
-
-This checks the application entry points and a generated JavaScript asset over
-localhost, then removes the test container and image. Docker and curl are required.
 
 ## Todo
 
