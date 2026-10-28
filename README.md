@@ -78,6 +78,17 @@
 - [video.js](https://videojs.com)
 - [react-slick](https://react-slick.neostack.com/)
 
+## Tests
+
+Install the locked dependencies and run the component regression tests:
+
+```sh
+npm ci
+npm test
+```
+
+The tests run locally without a TMDB API key or external requests.
+
 ## Install with Docker
 
 ```sh
