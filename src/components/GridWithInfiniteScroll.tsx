@@ -29,7 +29,7 @@ export default function GridWithInfiniteScroll({
     ) {
       handleNext(data.page + 1);
     }
-  }, [intersection]);
+  }, [intersection, data.page, data.total_pages, handleNext]);
 
   return (
     <>
