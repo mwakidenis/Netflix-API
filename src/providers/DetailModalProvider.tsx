@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState, useCallback } from "react";
+import { ReactNode, useEffect, useState, useCallback, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 import { INITIAL_DETAIL_STATE } from "src/constant";
@@ -30,15 +30,19 @@ export default function DetailModalProvider({
   >(INITIAL_DETAIL_STATE);
 
   const [getAppendedVideos] = useLazyGetAppendedVideosQuery();
+  const requestId = useRef(0);
 
   const handleChangeDetail = useCallback(
     async (newDetailType: { mediaType?: MEDIA_TYPE; id?: number }) => {
+      const currentRequestId = ++requestId.current;
       if (!!newDetailType.id && newDetailType.mediaType) {
         const response = await getAppendedVideos({
           mediaType: newDetailType.mediaType,
           id: newDetailType.id as number,
         }).unwrap();
-        setDetail({ ...newDetailType, mediaDetail: response });
+        if (currentRequestId === requestId.current) {
+          setDetail({ ...newDetailType, mediaDetail: response });
+        }
       } else {
         setDetail(INITIAL_DETAIL_STATE);
       }
@@ -48,6 +52,9 @@ export default function DetailModalProvider({
 
   useEffect(() => {
     setDetail(INITIAL_DETAIL_STATE);
+    return () => {
+      requestId.current += 1;
+    };
   }, [location.pathname, setDetail]);
 
   return (
